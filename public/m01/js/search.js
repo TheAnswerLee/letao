@@ -10,6 +10,7 @@ $(function () {
     $('#search-btn').on('click', function () {
         //用户输入的搜索关键字
         var keyword = $(this).siblings('input').val();
+
         console.log(keyword);
         //如果用户输入了关键字
         if (keyword) {
@@ -18,7 +19,7 @@ $(function () {
             localStorage.setItem('keyArr',JSON.stringify(keyArr))
             location.href = 'search-result.html?keyword=' + keyword;
         } else {
-            alert('请输入要搜索的商品关键字')
+            //alert('请输入要搜索的商品关键字')
         }
     })
 
